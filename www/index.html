@@ -270,7 +270,7 @@ function deletePost(postId) {
 
     postsRef.child(postId).update({content: '削除されました'})
         .then(() => {
-            showMessage('投稿を削除しました');
+            console.log('投稿を削除しました');
         })
         .catch((error) => {
             showMessage('削除に失敗しました：' + error.message, 'error');
